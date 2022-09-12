@@ -3,16 +3,20 @@ package ch.rts.si.microservice.microlegho.controller;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 
-//@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, SecurityAutoConfiguration.class})
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-@RestController
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
 public class LeghoController {
-    @GetMapping("/")
-    public String welcome() {
-        return "welcome";
+    @RequestMapping("/")
+
+    public String accueil(Model model)
+    {
+
+        return "Accueil";
+
     }
 }
 
