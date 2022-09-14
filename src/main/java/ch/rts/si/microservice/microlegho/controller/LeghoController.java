@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LeghoController {
     @RequestMapping("/")
 
-    public String accueil(Model model)
+    public String index(Model model)
     {
 
-        return "Accueil";
+        return "index";
 
     }
 }
